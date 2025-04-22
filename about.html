@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fade-in style -->
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.7s ease-in-out;
+    }
+
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="bg-gray-800 text-white px-6 py-4 flex justify-between items-center">
+    <div class="text-2xl font-bold">About Me</div>
+    <nav class="space-x-6">
+      <a href="index.html" class="hover:underline">Home</a>
+      <a href="about.html" class="text-blue-400 font-bold hover:underline">About Me</a>
+      <a href="projects.html" class="hover:underline">Projects</a>
+      <a href="skills.html" class="hover:underline">Skills</a>
+      <a href="contact.html" class="hover:underline">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Content with fade-in -->
+  <main id="aboutContent" class="fade-in flex-grow px-4 py-12 max-w-3xl mx-auto text-center">
+    <h2 class="text-3xl font-semibold text-gray-800 mb-4">Hello! I'm <strong>Arnetha Eka</strong></h2>
+    <p class="text-gray-700 text-lg leading-relaxed">
+      Hi! I'm Arnetha Eka, currently a 4th-semester undergraduate student majoring in Computer Science.
+      I've worked on several projects for courses like <strong>Software Engineering (RPL)</strong> and 
+      <strong>Application Development & System Integration (ADSI)</strong>. <br><br>
+      Right now, I’m also involved in an exciting project for my <strong>Web Development class</strong>.
+      I’m passionate about tech, love exploring new ideas, and always up for a challenge!
+    </p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-6 mt-12">
+    <p class="text-center text-sm">&copy; 2025 Arnetha Eka. All rights reserved.</p>
+  </footer>
+
+  <!-- JS untuk animasi fade-in -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const content = document.getElementById('aboutContent');
+      content.classList.add('show');
+    });
+  </script>
+
+</body>
+</html>

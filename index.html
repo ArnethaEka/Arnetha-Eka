@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio - Home</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen font-sans">
+
+  <!-- Header -->
+  <header class="bg-gray-800 text-white px-6 py-4 flex justify-between items-center">
+    <div class="text-2xl font-bold">My Portfolio</div>
+    <nav class="space-x-6">
+      <a href="index.html" class="font-bold hover:underline text-blue-400">Home</a>
+      <a href="about.html" class="text-white hover:underline">About Me</a>
+      <a href="projects.html" class="text-white hover:underline">Projects</a>
+      <a href="skills.html" class="text-white hover:underline">Skills</a>
+      <a href="contact.html" class="text-white hover:underline">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Content -->
+  <main class="flex flex-col md:flex-row justify-between items-center max-w-6xl mx-auto p-8 gap-8 flex-grow">
+    <div class="max-w-md">
+      <h1 class="text-3xl font-semibold mb-4 text-gray-800">Welcome to <strong>Arnetha</strong> Page</h1>
+      <p class="text-lg mb-6 text-gray-600">Aspiring Web Developer | Creative Thinker | Problem Solver</p>
+      <a href="about.html" class="bg-gray-800 text-white px-6 py-2 rounded hover:bg-gray-700 transition">Explore More</a>
+    </div>
+    <div class="w-72 h-72 rounded-full overflow-hidden shadow-lg">
+      <img src="fotokuWEB.jpg" alt="Arnetha Photo" class="w-full h-full object-cover">
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-6 mt-12">
+    <div class="flex justify-center space-x-6 text-2xl mb-4">
+      <a href="#" class="hover:text-blue-500 transition"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="hover:text-pink-500 transition"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="hover:text-sky-400 transition"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="hover:text-blue-400 transition"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" class="hover:text-gray-400 transition"><i class="fab fa-github"></i></a>
+    </div>
+    <p class="text-center text-sm">&copy; 2025 Arnetha Eka. All rights reserved.</p>
+  </footer>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const content = document.getElementById('projectsContent');
+      content.classList.add('show');
+    });
+  </script>
+
+</body>
+</html>

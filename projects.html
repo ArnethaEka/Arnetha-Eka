@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Projects</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Optional: Smooth entry animation using Tailwind & JS -->
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.7s ease-in-out;
+    }
+
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="bg-gray-800 text-white px-6 py-4 flex justify-between items-center">
+    <div class="text-2xl font-bold">Projects</div>
+    <nav class="space-x-6">
+      <a href="index.html" class="hover:underline">Home</a>
+      <a href="about.html" class="hover:underline">About Me</a>
+      <a href="projects.html" class="text-blue-400 font-bold hover:underline">Projects</a>
+      <a href="skills.html" class="hover:underline">Skills</a>
+      <a href="contact.html" class="hover:underline">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Content -->
+  <main id="projectsContent" class="fade-in flex-grow max-w-4xl mx-auto px-4 py-12">
+    <h2 class="text-3xl font-semibold text-center text-gray-800 mb-10">Here are some of the projects I have worked on:</h2>
+
+    <div class="space-y-6">
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">Personal Portfolio Website</h3>
+        <p class="text-gray-600">A simple and responsive portfolio website built using HTML, CSS, and Python.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">Job Seeker App</h3>
+        <p class="text-gray-600">An interactive job search application, where users can search for jobs based on region and skills using Figma.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+        <h3 class="text-xl font-bold text-gray-800 mb-2">Food Shop Website (on process)</h3>
+        <p class="text-gray-600">Search and book a restaurant based on the user's region using Tailwind CSS.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-6 mt-12">
+    <p class="text-center text-sm">&copy; 2025 Arnetha Eka. All rights reserved.</p>
+  </footer>
+
+  <!-- JS for fade-in on load -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const content = document.getElementById('projectsContent');
+      content.classList.add('show');
+    });
+  </script>
+
+</body>
+</html>

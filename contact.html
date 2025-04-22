@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Me</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fade-in style khusus main content -->
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.7s ease-in-out;
+    }
+
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="bg-gray-800 text-white px-6 py-4 flex justify-between items-center">
+    <div class="text-2xl font-bold">Contact</div>
+    <nav class="space-x-6">
+      <a href="index.html" class="hover:underline">Home</a>
+      <a href="about.html" class="hover:underline">About Me</a>
+      <a href="projects.html" class="hover:underline">Projects</a>
+      <a href="skills.html" class="hover:underline">Skills</a>
+      <a href="contact.html" class="text-blue-400 font-bold hover:underline">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main content with fade-in -->
+  <main id="contactContent" class="fade-in flex-grow max-w-3xl mx-auto px-4 py-12 text-center">
+    <h2 class="text-3xl font-semibold text-gray-800 mb-4">Let's Work Together!</h2>
+    <p class="text-gray-600 mb-8">If you'd like to get in touch or collaborate, feel free to contact me through any of the platforms below:</p>
+
+    <ul class="space-y-4">
+      <li class="bg-white px-6 py-4 rounded-lg shadow-md text-gray-700 hover:shadow-lg transition duration-300">
+        Email: <a href="mailto:arnethaekap@gmail.com" class="text-blue-500 hover:underline">arnethaekap@gmail.com</a>
+      </li>
+      <li class="bg-white px-6 py-4 rounded-lg shadow-md text-gray-700 hover:shadow-lg transition duration-300">
+        Instagram: <a href="https://instagram.com/arnethapurwa" target="_blank" class="text-blue-500 hover:underline">@arnethapurwa</a>
+      </li>
+      <li class="bg-white px-6 py-4 rounded-lg shadow-md text-gray-700 hover:shadow-lg transition duration-300">
+        GitHub: <a href="https://github.com/arnethaeka" target="_blank" class="text-blue-500 hover:underline">github.com/arnethaeka</a>
+      </li>
+    </ul>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-6 mt-12">
+    <p class="text-center text-sm">&copy; 2025 Arnetha Eka. All rights reserved.</p>
+  </footer>
+
+  <!-- Script to trigger fade-in only on main content -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const content = document.getElementById('contactContent');
+      content.classList.add('show');
+    });
+  </script>
+
+</body>
+</html>
